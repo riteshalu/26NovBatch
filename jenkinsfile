@@ -16,7 +16,7 @@ environment {
         }
         stage('Ansible Create Bucket') {
             steps {
-                sh 'ansible-playbook S3-bucket.yml'
+                sh 'aws s3 mb s3://prathamcloudit.com --region ap-south-1'
             }
         }
     }
