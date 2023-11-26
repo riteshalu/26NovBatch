@@ -14,11 +14,6 @@ environment {
                 sh 'terraform apply --auto-approve'
             }
         }
-        stage('Ansible Create Bucket') {
-            steps {
-                sh 'aws s3 mb s3://prathamcloudit.com --region ap-south-1'
-            }
-        }
     }
 }
 
