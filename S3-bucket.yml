@@ -1,7 +1,14 @@
 ---
 - hosts: localhost
+  vars:
+    state: present
+    s3_bucket: prathamcloudit1
+    key: terraform.tfstate
+    region: ap-south-1
   tasks:
     - name: Create S3 bucket using playbook
-      s3_bucket:
-        name: prathamcloudit.com
-        state: present
+      aws_s3:
+        bucket: prathamcloudit1
+        object: demo.txt
+        src: /root/demo.txt
+        mode: put
