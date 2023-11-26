@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
-  s3_bucket:
-    name: prathamcloudit2
+- s3_bucket:
+    name: mys3bucket
     state: present
