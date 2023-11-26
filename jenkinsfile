@@ -9,9 +9,9 @@ environment {
                 sh 'terraform init'
             }
         }
-        stage('Terraform-destroy') {
+        stage('Terraform-Apply') {
             steps {
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform Apply --auto-approve'
             }
         }
     }
