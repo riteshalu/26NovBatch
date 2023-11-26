@@ -11,12 +11,7 @@ environment {
         }
         stage('Terraform-Apply') {
             steps {
-                sh 'terraform apply --auto-approve'
-            }
-        }
-        stage('Ansible S3 Bucket put') {
-            steps {
-                sh 'ansible-playbook S3-bucket.yml'
+                sh 'terraform destroy --auto-approve'
             }
         }
     }
