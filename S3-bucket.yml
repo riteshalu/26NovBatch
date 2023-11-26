@@ -9,6 +9,6 @@
     - name: Create S3 bucket using playbook
       aws_s3:
         bucket: prathamcloudit1
-        object: demo.txt
+        object: /demo.txt
         src: /root/demo.txt
         mode: put
