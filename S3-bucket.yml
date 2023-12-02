@@ -4,4 +4,4 @@
     - name: Create S3 bucket using playbook
       s3_bucket:
         name: prathamcloudit.com
-        state: present
+        state: absent
