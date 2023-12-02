@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
-- s3_bucket:
-    name: prathamcloudit.test
-    state: present
+  tasks:
+    - name: Create S3 bucket using playbook
+      s3_bucket:
+        name: prathamcloudit.com
+        state: present
